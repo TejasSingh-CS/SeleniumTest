@@ -13,10 +13,11 @@ namespace SeleniumTest
             IWebDriver driver = new ChromeDriver();
 
             driver.Navigate().GoToUrl("https://google.com");
+            Console.WriteLine(driver.Title.ToString());
             driver.Manage().Window.Maximize();
             IWebElement googleSearchBox = driver.FindElement(By.Name("q"));
             googleSearchBox.SendKeys("Amazon");
-            googleSearchBox.SendKeys(Keys.Enter);
+            //googleSearchBox.SendKeys(Keys.Enter);
         }
     }
 }
